@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ticktock — Timesheet Management Application
 
-## Getting Started
+A sleek, responsive, and premium Next.js application for logging hours, tracking tasks, and managing weekly timesheets.
 
-First, run the development server:
+---
 
+## 🚀 Getting Started & Setup
+
+### 1. Clone & Install Dependencies
+First, install the package dependencies using npm:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Configure Environment Variables
+Create a `.env.local` file in the root directory and define the NextAuth secret:
+```env
+NEXTAUTH_SECRET=your_nextauth_secret_key_here
+NEXT_PUBLIC_API_URL=http://localhost:3000
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Run the Development Server
+Start the local Next.js dev server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-## Learn More
+### 4. Build for Production
+To build and optimize the application for production:
+```bash
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔑 Mock User Credentials
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To access the authenticated dashboard, use the following pre-configured credentials:
 
-## Deploy on Vercel
+* **Email:** `admin@test.com`
+* **Password:** `123456`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠 Tech Stack & Core Packages
+
+* **Framework:** Next.js 16 (App Router)
+* **Language:** TypeScript
+* **Styling:** CSS Modules / Vanilla CSS
+* **State & Forms:** React Hook Form & Zod
+* **Authentication:** NextAuth.js
+* **Testing:** Vitest & React Testing Library
+
+---
+
+## 📝 Key Features
+
+- **Authentication Module:** Secure login with "Remember me" functionality and session control.
+- **Interactive Dashboard:** 
+  - Filter timesheets by status (Completed, Incomplete, Missing) or custom date ranges.
+  - Sort entries dynamically by week, hours, or status.
+  - Interactive pagination to traverse large sets of weekly records.
+- **Detailed Weekly Overview:** Progress indicators showing hours tracked against the standard 40-hour work week.
+- **Task Management (CRUD):** Live modals to add, edit, or delete task entries under specific dates.
+- **Fully Responsive Layout:** Optimized mobile, tablet, and desktop interface with robust error states and loader views.
