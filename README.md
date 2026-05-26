@@ -11,14 +11,14 @@ First, install the package dependencies using npm:
 ```bash
 npm install
 ```
-
+   
 ### 2. Configure Environment Variables
 Create a `.env.local` file in the root directory and define the NextAuth secret:
 ```env
 NEXTAUTH_SECRET=your_nextauth_secret_key_here
 NEXT_PUBLIC_API_URL=http://localhost:3000
 ```
-
+  
 ### 3. Run the Development Server
 Start the local Next.js dev server:
 ```bash
